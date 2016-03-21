@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LDradioStation</string>
+    <string name="action_settings">Settings</string>
+    <!-- 菜单栏 -->
+    <string name="tuijian">推荐</string>
+    <string name="fenlei">分类</string>
+    <string name="jiemudan">节目单</string>
+    <string name="meiwen">美文</string>
+    <string name="xinwen">新闻</string>
+    <string name="fenxiang">分享</string>
+     <string name="wode">我的</string>
+    <!-- 退出 -->
+    <string name="cancle">取消</string>
+    <!-- 更多 -->
+    <string name="more">更多</string>
+
+</resources>

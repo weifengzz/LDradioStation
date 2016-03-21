@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+
+        <cn.edu.lyu.ldradiostation.views.LoginBG
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp" >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/login_bg" />
+
+            <ImageView
+                android:id="@+id/img_login_head"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/login_no" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/login_bg" />
+
+            <ImageView
+                android:id="@+id/login_head_no"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@drawable/login_bg"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_head_no"
+                android:layout_centerInParent="true"
+                android:text="已登录"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/et_user"
+            android:layout_width="match_parent"
+            android:layout_height="36dip"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_edittext"
+            android:clickable="true"
+            android:hint="请输入学号"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="15dip" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="36dip"
+            android:layout_below="@id/et_user"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/bg_edittext"
+            android:clickable="true"
+            android:hint="请输入密码"
+            android:padding="5dip"
+            android:password="true"
+            android:singleLine="true"
+            android:textColorHint="#AAAAAA"
+            android:textSize="15dip" />
+
+        <LinearLayout
+            android:id="@+id/login_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="36dip"
+            android:layout_below="@id/et_pwd"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp" >
+
+            <cn.edu.lyu.ldradiostation.views.LoginBtnView
+                android:id="@+id/user_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3l"
+            android:layout_width="match_parent"
+            android:layout_height="36dip"
+            android:layout_below="@id/login_ll1"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp" >
+
+            <cn.edu.lyu.ldradiostation.views.Login3Login
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/l3l"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/login_wechat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/wechat" />
+
+            <ImageView
+                android:id="@+id/login_sina"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/sina" />
+
+            <ImageView
+                android:id="@+id/login_taobao"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:src="@drawable/taobao" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_rl3"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/login_loading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/loading"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

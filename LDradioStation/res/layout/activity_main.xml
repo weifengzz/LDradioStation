@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rawerLayout抽屉效果 -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <!-- 主界面显示的布局 -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 头部显示的效果 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="#282828" >
+
+            <!-- LOGO -->
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo" />
+            <!-- 头像 -->
+
+            <ImageView
+                android:id="@+id/login_lv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:onClick="showLogin"
+                android:src="@drawable/login_no" />
+            <!-- 头像的背景 -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/tx_bg" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/tx_bg" />
+        </RelativeLayout>
+        <!-- 滑动标题栏 -->
+
+        <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:scrollbars="none" >
+
+            <!-- 标题栏的布局 -->
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <!-- 自定义控件TextView -->
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/tuijian"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/fenlei"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/jiemudan"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/meiwen"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/xinwen"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/fenxiang"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+
+                <cn.edu.lyu.ldradiostation.views.NavigationView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/wode"
+                    android:textColor="#575656"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <!-- ViewPager控件 -->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27" />
+        <!-- 相对布局控制底部的图片 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:background="#dcdbdb" >
+
+            <!-- 首先设置转动的歌曲图片 -->
+
+            <ImageView
+                android:id="@+id/cir_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@drawable/tx01" />
+            <!-- 开始的图标 -->
+
+            <ImageView
+                android:id="@+id/play_start"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.8"
+                android:src="@drawable/play_start" />
+            <!-- 暂停的图标 -->
+
+            <ImageView
+                android:id="@+id/play_pause"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.8"
+                android:src="@drawable/play_stop"
+                android:visibility="invisible" />
+            <!-- 覆盖的图标 -->
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/tx_bg2" />
+            <!-- 线性布局显示底部其他图标 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal" >
+
+                <!-- 相对布局用于控制图标不要变形 -->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1" >
+
+                    <!-- 列表图标 -->
+
+                    <ImageView
+                        android:id="@+id/img_detail1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/detail"
+                        android:onClick="showAction" />
+                </RelativeLayout>
+                <!-- 上一曲图标 -->
+
+                <ImageView
+                    android:id="@+id/play_pre"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/play_pre"
+                    android:onClick="showAction" />
+                <!-- 中间部分不显示留给旋转的图片 -->
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+                <!-- 下一曲的图标 -->
+
+                <ImageView
+                    android:id="@+id/play_next"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/play_next"
+                    android:onClick="showAction" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/img_detail2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/music"
+                        android:onClick="showAction" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 抽屉界面 -->
+
+    <LinearLayout
+        android:id="@+id/drawerLayout_show"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
